@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Socket Client</title>
+    <!-- Bootstrap CSS CDN link -->
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <style>
+        /* Custom styling */
+        body {
+            padding: 20px;
+        }
+
+        #messages {
+            margin-top: 20px;
+        }
+
+        .outgoing-message {
+            text-align: right;
+            background-color: #308D46;
+            color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .incoming-message {
+            text-align: left;
+            background-color: #2C3E50;
+            color: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .gfg-color {
+            background-color: #308D46;
+            color: white;
+        }
+
+        .gfg-color:hover {
+            color: white;
+        }
+
+        .gfg-blue {
+            background-color: #2C3E50;
+            color: white;
+        }
+
+        .gfg-blue:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input
+                    class="form-control mb-2"
+                    id="name"
+                    placeholder="Your Name"
+                    type="text"
+            />
+            <input
+                    class="btn gfg-blue mb-2"
+                    id="connectButton"
+                    onclick="connect()"
+                    type="button"
+                    value="Connect"
+            />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input
+                    class="form-control mb-2"
+                    id="message"
+                    placeholder="Type a message"
+                    type="text"
+            />
+            <input
+                    class="btn gfg-color mb-2"
+                    onclick="sendToGroupChat()"
+                    type="button"
+                    value="Send"
+            />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="border p-3" id="messages"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
